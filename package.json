@@ -1,0 +1,17 @@
+{
+  "name": "ProjetChefOeuvre",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"yarn workspace back start\" \"yarn workspace front dev\""
+  },
+  "private": true,
+  "workspaces": [
+    "back",
+    "front"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
