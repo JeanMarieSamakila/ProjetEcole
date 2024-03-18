@@ -61,6 +61,16 @@ app.post('/inscription', async (req, res) => {
       res.status(500).json({ message: "Erreur lors de l'enregistrement de l'utilisateur" });
     }
   });
+  app.get('/inscrits', async (req, res) => {
+    try {
+      const personnesInscrites = await prisma.inscription.findMany();
+      res.json(personnesInscrites);
+    } catch (error) {
+      console.error('Erreur lors de la récupération des personnes inscrites :', error);
+      res.status(500).json({ message: "Erreur lors de la récupération des personnes inscrites" });
+    }
+  });
+  
 
 app.listen(3010, () => {
   console.log('Serveur Express en cours d\'exécution sur le port 3010');
