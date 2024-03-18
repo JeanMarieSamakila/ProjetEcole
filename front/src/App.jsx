@@ -9,7 +9,8 @@ import Resultat from './Resultat'
 import Login from './Login'
 import Inscription from './Inscription'
 import Section from './Section'
-// import Suivant from './Suivant'
+import Signup  from './Signup'
+
 
 
 
@@ -26,7 +27,8 @@ function App() {
           <Route path='/Login' element={<Login />} />
           <Route path='/Inscription' element={<Inscription />} />
           <Route path='/Section' element={<Section />} />
-          {/* <Route path='/Suivant' element={<Suivant />} /> */}
+          <Route path='/Signup' element={<Signup />} />
+
 
         </Routes>
         <Footer />

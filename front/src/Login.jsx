@@ -58,16 +58,6 @@ export default function Login() {
         <div className="pb-10 ">
           <input
             className="border rounded-full h-14 w-1/4  bg-gray-100 pl-5 "
-            type="text"
-            name="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Nom d’Utilisateur"
-          />
-        </div>
-        <div className="pb-10 ">
-          <input
-            className="border rounded-full h-14 w-1/4  bg-gray-100 pl-5 "
             type="email"
             name="email"
             value={email}

@@ -48,7 +48,7 @@ export default function Signup() {
       </div>
       <div className="flex pl-[350px] ">
         <div>
-          <Link to=""><p className=" text-sky-300 font-bold">Sign Up</p></Link>
+          <Link to=""><p className=" text-sky-300 text-2xl font-bold">Sign Up</p></Link>
         </div>
       </div>
       <form onSubmit={handleSubmit} className="flex-col pt-20 pl-44">
