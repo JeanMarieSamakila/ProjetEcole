@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PersIns from "./PersIns";
 
 export default function Inscription() {
   const [name, setName] = useState("");
@@ -12,11 +13,40 @@ export default function Inscription() {
   const [classeprovenance, setClasseprovenance] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
+  // Fonction appelée lorsqu'une option est sélectionnée
+  const handleSelectChange = (event) => {
+    setGenre(event.target.value); // Mise à jour de la valeur sélectionnée dans l'état local
+  };
+  const handleSectionSelectChange = (event) => {
+    setSection(event.target.value); // Mise à jour de la valeur sélectionnée dans l'état local
+  };
+  const handleOptionSelectChange = (event) => {
+    setOption(event.target.value); // Mise à jour de la valeur sélectionnée dans l'état local
+  };
+
+  const handleClassesollicitelectChange = (event) => {
+    setClassesollicite(event.target.value); // Mise à jour de la valeur sélectionnée dans l'état local
+  };
+  const handleClasseprovenanceSelectChange = (event) => {
+    setClasseprovenance(event.target.value); // Mise à jour de la valeur sélectionnée dans l'état local
+  };
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Vérification des champs obligatoires
-    if (!name || !phone || !genre || !section || !option || !classesollicite || !ecoleprovenance || !pourcentage || !classeprovenance) {
+    if (
+      !name ||
+      !phone ||
+      !genre ||
+      !section ||
+      !option ||
+      !classesollicite ||
+      !ecoleprovenance ||
+      !pourcentage ||
+      !classeprovenance
+    ) {
       setErrorMessage("Veuillez remplir tous les champs obligatoires.");
       return;
     }
@@ -59,7 +89,10 @@ export default function Inscription() {
         </h1>
       </div>
 
-      <form onSubmit={handleSubmit} className="flex justify-center items-center">
+      <form
+        onSubmit={handleSubmit}
+        className="flex justify-center items-center"
+      >
         <div className=" ml-72 ">
           <h1 className="font-bold text-sky-950 pl-10 pb-5 ">
             1. IDENTITE DE L’ELEVE
@@ -78,14 +111,24 @@ export default function Inscription() {
             </div>
             <div className="pl-10 space-y-2">
               <p>Genre </p>
-              <input
+              {/* <input
                 className="h-10 w-96 border rounded-lg bg-stone-100"
                 type="text"
                 name="genre"
                 value={genre}
                 onChange={(e) => setGenre(e.target.value)}
                 id="genre"
-              />
+              /> */}
+              <select
+                className=" w-[380px] rounded-lg h-10"
+                value={genre}
+                onChange={handleSelectChange}
+              >
+                <option value="">Sélectionnez le genre de l'eleve</option>
+                <option value="Masculin">Masculin</option>
+                <option value="Feminin">Feminin</option>
+                {/* <p>Option sélectionnée : {genre}</p> */}
+              </select>
             </div>
             <div className="pl-10 space-y-2">
               <p>Telephone </p>
@@ -108,36 +151,72 @@ export default function Inscription() {
                 <div className=" space-y-7 ">
                   <div className="pl-10 space-y-2">
                     <p>Section</p>
-                    <input
+                    {/* <input
                       className="h-10 w-96 border rounded-lg bg-stone-100"
                       type="text"
                       name="section"
                       value={section}
                       onChange={(e) => setSection(e.target.value)}
                       id="section"
-                    />
+                    /> */}
+                    <select
+                      className=" w-[380px] rounded-lg h-10"
+                      value={section}
+                      onChange={handleSectionSelectChange}
+                    >
+                      <option value="">
+                        Sélectionnez la section de l'élève
+                      </option>
+                      <option value="Primaire">Primaire</option>
+                      <option value="Secondaire">Secondaire</option>
+                      {/* <p>Option sélectionnée : {genre}</p> */}
+                    </select>
                   </div>
                   <div className="pl-10 space-y-2">
                     <p>Option</p>
-                    <input
+                    {/* <input
                       className="h-10 w-96 border rounded-lg bg-stone-100"
                       type="text"
                       name="option"
                       value={option}
                       onChange={(e) => setOption(e.target.value)}
                       id="option"
-                    />
+                    /> */}
+                    <select
+                      className=" w-[380px] rounded-lg h-10"
+                      value={option}
+                      onChange={handleOptionSelectChange}
+                    >
+                      <option value="">Sélectionnez l'option de l'eleve</option>
+                      <option value="Scientifique">Scientifique</option>
+                      <option value="Commercial Général">Commercial Général</option>
+                      {/* <p>Option sélectionnée : {genre}</p> */}
+                    </select>
                   </div>
                   <div className="pl-10 space-y-2">
                     <p>Classe</p>
-                    <input
+                    {/* <input
                       className="h-10 w-96 border rounded-lg bg-stone-100"
                       type="text"
                       name="classe"
                       value={classesollicite}
                       onChange={(e) => setClassesollicite(e.target.value)}
                       id="classe"
-                    />
+                    /> */}
+                    <select
+                className=" w-[380px] rounded-lg h-10"
+                value={classesollicite}
+                onChange={handleClassesollicitelectChange}
+              >
+                <option value="">Sélectionnez la classe de l'eleve</option>
+                <option value="1 ère">1 ère</option>
+                <option value="2 iéme">2 iéme</option>
+                <option value="3 iéme">3 iéme</option>
+                <option value="4 iéme">4 iéme</option>
+                <option value="5 iéme">5 iéme</option>
+                <option value="6 iéme">6 iéme</option>
+                {/* <p>Option sélectionnée : {genre}</p> */}
+              </select>
                   </div>
                 </div>
               </div>
@@ -161,14 +240,28 @@ export default function Inscription() {
                     </div>
                     <div className="pl-10 space-y-2">
                       <p>Classe</p>
-                      <input
+                      {/* <input
                         className="h-10 w-96 border rounded-lg bg-stone-100"
                         type="text"
                         name="classeprovenance"
                         value={classeprovenance}
                         onChange={(e) => setClasseprovenance(e.target.value)}
                         id="ecolepro"
-                      />
+                      /> */}
+                      <select
+                className=" w-[380px] rounded-lg h-10"
+                value={classeprovenance}
+                onChange={handleClasseprovenanceSelectChange}
+              >
+                <option value="">Sélectionnez la classe de l'eleve</option>
+                <option value="1 ère">1 ère</option>
+                <option value="2 iéme">2 iéme</option>
+                <option value="3 iéme">3 iéme</option>
+                <option value="4 iéme">4 iéme</option>
+                <option value="5 iéme">5 iéme</option>
+                <option value="6 iéme">6 iéme</option>
+                {/* <p>Option sélectionnée : {genre}</p> */}
+              </select>
                     </div>
                     <div className="pl-10 space-y-2">
                       <p>Pourcentage (%)</p>
@@ -188,12 +281,13 @@ export default function Inscription() {
           </div>
           <div className="pl-64 pt-24 pb-10 ">
             <button
-            type="submit"
+              type="submit"
               className=" bg-blue-950 font-bold text-white border rounded-full w-40 h-16"
             >
               Suivant
             </button>
           </div>
+          <PersIns />
         </div>
       </form>
     </div>

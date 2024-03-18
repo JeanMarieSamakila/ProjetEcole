@@ -52,6 +52,11 @@ export default function Resultat() {
               placeholder="Période"
             />
           </div>
+          <select name="" id="">
+            <option value="Premier"> Premier</option>
+            <option value="Deuxieme">Deuxieme</option>
+            <option value="Troisieme">Troisieme</option>
+          </select>
           <div className="pl-64 pt-5  ">
             <button
               onClick={handleClick}

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
-export default function Login() {
+export default function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -43,15 +43,12 @@ export default function Login() {
           </Link>
         </div>
         <div>
-          <h1 className=" ">Connexion</h1>
+          <h1 className=" ">S'Inscrire</h1>
         </div>
       </div>
-      <div className="flex gap-64  pl-44">
+      <div className="flex pl-[350px] ">
         <div>
-          <p className=" text-blue-300 font-bold">Sign In</p>
-        </div>
-        <div>
-          <Link to="/Signup"><p className=" text-sky-300 font-bold">Sign Up</p></Link>
+          <Link to=""><p className=" text-sky-300 font-bold">Sign Up</p></Link>
         </div>
       </div>
       <form onSubmit={handleSubmit} className="flex-col pt-20 pl-44">
@@ -90,7 +87,7 @@ export default function Login() {
             type="submit"
             className="font-bold text-white border rounded-full h-14 w-44 bg-blue-950 "
           >
-            Se connecté
+            S'Inscrire
           </button>
         </div>
       </form>

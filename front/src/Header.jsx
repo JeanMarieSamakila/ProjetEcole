@@ -8,16 +8,16 @@ export default function Header() {
             <div className="pr-80">
                 <img className=" w-16 border rounded-full " src="src/image/logo.jpg" alt="" />
             </div>
-            <div className="flex text-white font-bold gap-20 pt-2">
+            <div className="flex text-white font-bold gap-20 ">
 
-                <Link to="/"><h2 className="pt-2">Accueil</h2></Link>
-                <Link to="/Contact"><h2 className="pt-2">Contact</h2></Link>
-                <Link to="/Resultat"><h2 className="pt-2">Resultat</h2></Link>
-               <Link to="/Section"> <h2 className="pt-2">Nos Section</h2></Link>
-
-                <div className="pb-2">
-                    <Link to="Login"> <button className=" text-blue-950 bg-blue-300 border rounded-full w-32 h-14 ">Log in</button></Link>
+                <div className='pt-3 gap-20 flex'>
+                <Link to="/"><h2 className="hover:bg-gradient-to-r from-green-400 to-blue-400 w-24 text-center rounded-3xl">Accueil</h2></Link>
+                <Link to="/Contact"><h2 className="hover:bg-gradient-to-r from-green-400 to-blue-400 w-24 text-center rounded-3xl">Contact</h2></Link>
+                <Link to="/Resultat"><h2 className="hover:bg-gradient-to-r from-green-400 to-blue-400 w-24 text-center rounded-3xl">Resultat</h2></Link>
+               <Link to="/Section"> <h2 className="hover:bg-gradient-to-r from-green-400 to-blue-400 w-28 text-center rounded-3xl">Nos Section</h2></Link>
                 </div>
+                <Link to="/Login"> <button className=" text-blue-950 hover:bg-gradient-to-r from-green-400 to-blue-400 bg-blue-300 rounded-full w-28 h-12 ">Log in</button></Link>
+                
             </div>
         </section>
 
