@@ -32,7 +32,7 @@ export default function Login() {
 
   return (
     <div>
-      <div className="flex items-center pt-5 bg-blue-950 gap-10 text-xl font-bold w-90 h-20 mb-20  pl-20 text-white ">
+      <div className="flex items-center bg-blue-950 gap-10 text-xl font-bold w-90 h-20 mb-0  pl-20 text-white ">
         <div>
           <Link to="/">
             <img
@@ -46,7 +46,8 @@ export default function Login() {
           <h1 className=" ">Connexion</h1>
         </div>
       </div>
-      <div className="flex gap-64  pl-44">
+      <div className="images-arriere justify-center items-center text-center">
+      <div className="flex gap-64 justify-center text-center pl-44 mt-40 text-2xl">
         <div>
           <p className=" text-blue-300 font-bold">Sign In</p>
         </div>
@@ -57,7 +58,7 @@ export default function Login() {
       <form onSubmit={handleSubmit} className="flex-col pt-20 pl-44">
         <div className="pb-10 ">
           <input
-            className="border rounded-full h-14 w-1/4  bg-gray-100 pl-5 "
+            className="border rounded-full h-14 w-1/4  bg-transparent pl-5 "
             type="email"
             name="email"
             value={email}
@@ -67,7 +68,7 @@ export default function Login() {
         </div>
         <div className="pb-10 ">
           <input
-            className="border rounded-full h-14 w-1/4  bg-gray-100 pl-5 "
+            className="border rounded-full h-14 w-1/4 bg-transparent pl-5 "
             type="password"
             name="password"
             value={password}
@@ -75,15 +76,16 @@ export default function Login() {
             placeholder="Mot de Passe"
           />
         </div>
-        <div className="pt-10 pb-10">
+        <div className="pt-10 pb-20 ">
           <button
             type="submit"
-            className="font-bold text-white border rounded-full h-14 w-44 bg-blue-950 "
+            className="font-bold text-blue-950 border rounded-full h-14 w-44 bg-white "
           >
             Se connecté
           </button>
         </div>
       </form>
+      </div>
     </div>
   );
 }

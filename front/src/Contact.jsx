@@ -40,41 +40,41 @@ export default function Contact() {
         {/* <div className="flex items-center pt-5 bg-blue-950 gap-10 text-xl font-bold w-90 h-20 mb-20  pl-20 text-white ">
             <HeaderContact/>
             </div> */}
-        <div className='pb-32'>
+        <div className="">
           <HeaderContact />
         </div>
-        <div className="flex  items-center justify-center font-bold">
-          <form className=" items-center justify-center border-2xl  w-1/2 pt-2 ml-64 mb-80">
+        <div className="flex  items-center justify-center font-bold bg-slate-300">
+          <form className=" items-center justify-center border-2xl  w-1/2 pt-2 ml-64 mb-80 mt-20">
             <div className="flex pl-5 gap-16">
               <p for="name"> Nom :</p>
               <input
-                className="h-14  border rounded-lg w-1/2  bg-gray-100 "
+                className="h-14  border rounded-lg w-[51%]  bg-gray-100 "
                 type="text"
                 id="nom"
               />
             </div>
-            <div className="flex pt-9 pl-5 gap-6 ">
+            <div className="flex pt-9 pl-4 gap-6 ">
               <p for="tel">Telephone :</p>
               <input
-                className="h-14 border rounded-lg w-1/2  bg-gray-100  "
+                className="h-14 border rounded-lg w-[51%]  bg-gray-100  "
                 type="tel"
                 id="tel"
               />
             </div>
-            <div className="flex pt-9  pl-5 gap-16 ">
+            <div className="flex pt-9  pl-6 gap-16 ">
               <p for="email">Mail :</p>
               <input
-                className="h-14 border rounded-lg w-1/2  bg-gray-100 "
+                className="h-14 border rounded-lg w-[51%] ml-1  bg-gray-100 "
                 type="email"
                 id="email"
               />
             </div>
 
-            <div className="flex pt-9  pl-5 gap-10">
+            <div className="flex pt-9  pl-4 gap-10">
               <p for="message">Message :</p>
               <textarea
                 name="message"
-                className="h-14 border rounded-lg w-1/2  bg-gray-100 "
+                className="h-14 border rounded-lg w-[51%] ml-  bg-gray-100 "
                 id="message"
               />
             </div>
