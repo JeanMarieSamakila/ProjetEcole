@@ -10,10 +10,10 @@ export default function Body() {
             <Header />
             <div className="container_central flex flex-col items-center justify-center gap-18pt-20 overflow-y-hidden">
                 <div className="flex items-center justify-center z-10">
-                    <h4 className=" h-32 text-8xl font-bold font-serif text-white content-center" >Ensemble nous irons loin.</h4>
+                    <h4 className=" h-32 text-8xl font-bold font-serif text-blue-400 content-center" >Ensemble nous irons loin.</h4>
                 </div>
                 <div className="flex  text-center justify-center">
-                    <h1 className="font-bold font-mono pl-40 pr-40 text-blue-200  text-3xl z-10">"Découvrez l'excellence académique et l'environnement stimulant de notre école, où chaque élève s'épanouit et réussit!" </h1>
+                    <h1 className="font-bold font-mono pl-40 pr-40 text-white  text-3xl z-10">"Découvrez l'excellence académique et l'environnement stimulant de notre école, où chaque élève s'épanouit et réussit!" </h1>
                 </div>
             
                 <div className=" flex pt-0 gap-10 ">
@@ -32,7 +32,7 @@ export default function Body() {
                             <img className='w-20 ml-5' src="src/image/material-symbols-light--assignment-ind-outline-sharp.svg" alt="" />
                         </div>
                         <div>
-                            <h1 className=" ">Contact</h1>
+                          <Link to="/Dash"><h1 className=" ">Dash-bord</h1></Link> 
                         </div>
                     </div>
 

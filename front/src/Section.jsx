@@ -1,113 +1,92 @@
-import HeaderSection from "./headermenu/HeaderSection";
+import HeaderContact from "./headermenu/HeaderContact";
 
 
-export default function Section() {
+export default function Contact() {
+  const handleClick = (e) => {
+    const nom = document.getElementById('nom').value;
+    const tel = document.getElementById('tel').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    // const  = document.querySelectorAll('matricule').value;
+    if (nom === '' || tel === '' || email === '' || message === '') {
+      alert('Veuillez remplir tous les champs obligatoires.');
+      e.preventDefault();
+    }
+    else {
+      nom === nom.value;
+      tel === tel.value;
+      email === email.value;
+      message === message.value;
+      alert('Votre message a bien été envoyé!');
+    }
+  };
 
-    return (
-      <div>
-        {/* <div className="flex items-center pt-5 bg-blue-950 gap-10 text-xl font-bold w-90 h-20 mb-20  pl-20 text-white ">
-                <div>
-                <Link to="/"><img className='w-8' src="src/image/material-symbols-light--arrow-back-ios-new.svg" alt="" /></Link>
-                </div>
-                <h1> Section</h1>
-            </div> */}
-        <div className="pb-32">
-          
-          <HeaderSection/>
-        </div>
-        <div className=" flex-col text-center pl-80 pr-80">
-          <div>
-            <h1 className="underline font-bold text-blue-950 text-4xl">
-              Section Secondaire
-            </h1>
-            <p>
-              Bienvenue dans la section Secondaire de notre école, où
-              l'apprentissage devient une aventure stimulante et transformative.
-              Notre engagement envers l'excellence académique et le
-              développement personnel prépare les élèves à réussir dans un monde
-              en constante évolution.
-            </p>
-          </div>
+  function tel(numero) {
+    let format = /^(084|085|080|089|081|082|099|097|090)/;
+    return format.test(numero);
+  }
 
-          <div className="mt-10">
-            <h1 className="underline font-bold text-blue-950 text-3xl">
-              Notre Vision Éducative
-            </h1>
-            <p>
-              À la section Secondaire, nous sommes déterminés à offrir un
-              environnement d'apprentissage dynamique et inclusif, où chaque
-              élève est encouragé à explorer ses passions, à exceller
-              académiquement et à devenir un citoyen du monde responsable.
-            </p>
-          </div>
 
-          <div className="mt-10">
-            <h1 className="font-bold text-blue-950 text-3xl">
-              Programme Scolaire
-            </h1>
-            <p>
-              Notre programme Scolaire rigoureux met l'accent sur la pensée
-              critique, la résolution de problèmes et la collaboration. Les
-              élèves ont la possibilité de choisir parmi une variété de cours
-              avancés, y compris les sciences, les mathématiques, les sciences
-              humaines, les arts et les langues étrangères.
-            </p>
-          </div>
+  return (
+    <div>
 
-          <div className="mt-10">
-            <h1 className="font-bold text-blue-950 text-3xl">
-              Enrichissement et Dépassement
-            </h1>
-            <p>
-              En plus des cours obligatoires, nous offrons des programmes
-              d'enrichissement et des activités extracurriculaires qui
-              permettent aux élèves d'explorer leurs intérêts spécifiques et de
-              développer leurs compétences dans des domaines tels que les arts,
-              le sport, la technologie et le leadership.
-            </p>
-          </div>
-          <div className="mt-10">
-            <h1 className="font-bold text-blue-950 text-3xl">
-              Soutien aux Élèves
-            </h1>
-            <p>
-              Nous sommes déterminés à soutenir le succès de chaque élève. Notre
-              équipe pédagogique offre un soutien personnalisé, des services de
-              conseil et des programmes de tutorat pour aider les élèves à
-              surmonter les défis académiques et personnels.
-            </p>
-          </div>
-          <div className="mt-10">
-            <h1 className="font-bold text-blue-950 text-3xl">
-              Préparation à l'Université et à la Carrière
-            </h1>
-            <p>
-              Notre programme vise à préparer les élèves à réussir au-delà de
-              l'école. Nous offrons des conseils en orientation scolaire et
-              professionnelle, des opportunités de stage et des ressources pour
-              aider les élèves à planifier leur parcours postsecondaire et leur
-              carrière future.
-            </p>
-          </div>
+      <div className='pb-32'>
+        <HeaderContact />
+      </div>
+      <div className="image-contact">
+        <div className="flex  items-center justify-center font-bold">
+          {/* <div className="">
+          <img src="src/image/istockphoto-2.jpg" alt="" />
+        </div> */}
+          <form className=" items-center justify-center border-2xl  w-1/2 pt-2 pl-20 mb-80">
 
-          <div className="mt-10">
-            <h1 className="font-bold text-blue-950 text-3xl">Admissions</h1>
-            <p>
-              Pour en savoir plus sur le processus d'admission à la section
-              Secondaire de notre école et pour planifier une visite, veuillez
-              contacter notre bureau des admissions. Nous sommes impatients de
-              vous accueillir dans notre communauté scolaire dynamique.
-            </p>
-          </div>
-          <div className="mt-20 mb-5">
-            <p>
-              Cette structure offre un aperçu des principaux aspects de la
-              section Secondaire de l'école, mettant en avant le programme
-              académique, les activités enrichissantes, le soutien aux élèves et
-              la préparation à l'université et à la carrière.
-            </p>
-          </div>
+
+            <div className="flex pl-5 gap-16">
+              <p for="name"> Nom :</p>
+              <input
+                className="h-14  border rounded-lg w-1/2  bg-gray-100 "
+                type="text"
+                id="nom"
+              />
+            </div>
+            <div className="flex pt-9 pl-5 gap-6 ">
+              <p for="tel">Telephone :</p>
+              <input
+                className="h-14 border rounded-lg w-1/2  bg-gray-100  "
+                type="tel"
+                id="tel"
+              />
+            </div>
+            <div className="flex pt-9  pl-5 gap-16 ">
+              <p for="email">Mail :</p>
+              <input
+                className="h-14 border rounded-lg w-1/2  bg-gray-100 "
+                type="email"
+                id="email"
+              />
+            </div>
+
+            <div className="flex pt-9  pl-5 gap-10">
+              <p for="message">Message :</p>
+              <textarea
+                name="message"
+                className="h-14 border rounded-lg w-1/2  bg-gray-100 "
+                id="message"
+              />
+            </div>
+            <div className="pl-64 pt-24 ">
+              <button
+                onClick={handleClick}
+                type="submit"
+                className=" bg-blue-950 font-bold text-white border rounded-full w-32 h-14"
+              >
+                Envoyer
+              </button>
+            </div>
+
+          </form>
         </div>
       </div>
-    );
+    </div>
+  );
 }
