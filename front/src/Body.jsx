@@ -31,8 +31,9 @@ export default function Body() {
                         <div>
                             <img className='w-20 ml-5' src="src/image/material-symbols-light--assignment-ind-outline-sharp.svg" alt="" />
                         </div>
-                        <div>
-                            <h1 className=" ">Contact</h1>
+                        <div >
+                            <Link to='/PersIns'>
+                            <h1 className=' w-36'>Eleves Ins</h1></Link>
                         </div>
                     </div>
 

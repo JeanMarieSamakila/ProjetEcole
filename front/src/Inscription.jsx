@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PersIns from "./PersIns";
+import HeaderInscription from "./headermenu/HeaderInsciption";
 
 export default function Inscription() {
   const [name, setName] = useState("");
@@ -52,7 +52,7 @@ export default function Inscription() {
     }
 
     try {
-      const response = await fetch("http://localhost:3010/inscription", {
+      const response = await fetch("http://localhost:3000/inscription", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -84,16 +84,16 @@ export default function Inscription() {
   return (
     <div className=" ">
       <div className="">
-        <h1 className=" items-center pt-5 bg-blue-950 text-xl font-bold text-white w-74 h-20 mb-20  pl-20">
+        <HeaderInscription/>
+      </div>
+      <h1 className="pt-5 text-xl font-bold text-blue-950 w-74 underline h-16 pl-20">
           Formulaire de demande d’inscription
         </h1>
-      </div>
 
       <form
         onSubmit={handleSubmit}
-        className="flex justify-center items-center"
-      >
-        <div className=" ml-72 ">
+        className="flex justify-center items-center bg-slate-400">
+        <div className=" ml-72 mt-20 ">
           <h1 className="font-bold text-sky-950 pl-10 pb-5 ">
             1. IDENTITE DE L’ELEVE
           </h1>
@@ -111,14 +111,6 @@ export default function Inscription() {
             </div>
             <div className="pl-10 space-y-2">
               <p>Genre </p>
-              {/* <input
-                className="h-10 w-96 border rounded-lg bg-stone-100"
-                type="text"
-                name="genre"
-                value={genre}
-                onChange={(e) => setGenre(e.target.value)}
-                id="genre"
-              /> */}
               <select
                 className=" w-[380px] rounded-lg h-10"
                 value={genre}
@@ -127,7 +119,6 @@ export default function Inscription() {
                 <option value="">Sélectionnez le genre de l'eleve</option>
                 <option value="Masculin">Masculin</option>
                 <option value="Feminin">Feminin</option>
-                {/* <p>Option sélectionnée : {genre}</p> */}
               </select>
             </div>
             <div className="pl-10 space-y-2">
@@ -151,14 +142,6 @@ export default function Inscription() {
                 <div className=" space-y-7 ">
                   <div className="pl-10 space-y-2">
                     <p>Section</p>
-                    {/* <input
-                      className="h-10 w-96 border rounded-lg bg-stone-100"
-                      type="text"
-                      name="section"
-                      value={section}
-                      onChange={(e) => setSection(e.target.value)}
-                      id="section"
-                    /> */}
                     <select
                       className=" w-[380px] rounded-lg h-10"
                       value={section}
@@ -169,19 +152,10 @@ export default function Inscription() {
                       </option>
                       <option value="Primaire">Primaire</option>
                       <option value="Secondaire">Secondaire</option>
-                      {/* <p>Option sélectionnée : {genre}</p> */}
                     </select>
                   </div>
                   <div className="pl-10 space-y-2">
                     <p>Option</p>
-                    {/* <input
-                      className="h-10 w-96 border rounded-lg bg-stone-100"
-                      type="text"
-                      name="option"
-                      value={option}
-                      onChange={(e) => setOption(e.target.value)}
-                      id="option"
-                    /> */}
                     <select
                       className=" w-[380px] rounded-lg h-10"
                       value={option}
@@ -190,19 +164,10 @@ export default function Inscription() {
                       <option value="">Sélectionnez l'option de l'eleve</option>
                       <option value="Scientifique">Scientifique</option>
                       <option value="Commercial Général">Commercial Général</option>
-                      {/* <p>Option sélectionnée : {genre}</p> */}
                     </select>
                   </div>
                   <div className="pl-10 space-y-2">
                     <p>Classe</p>
-                    {/* <input
-                      className="h-10 w-96 border rounded-lg bg-stone-100"
-                      type="text"
-                      name="classe"
-                      value={classesollicite}
-                      onChange={(e) => setClassesollicite(e.target.value)}
-                      id="classe"
-                    /> */}
                     <select
                 className=" w-[380px] rounded-lg h-10"
                 value={classesollicite}
@@ -215,7 +180,6 @@ export default function Inscription() {
                 <option value="4 iéme">4 iéme</option>
                 <option value="5 iéme">5 iéme</option>
                 <option value="6 iéme">6 iéme</option>
-                {/* <p>Option sélectionnée : {genre}</p> */}
               </select>
                   </div>
                 </div>
@@ -240,14 +204,6 @@ export default function Inscription() {
                     </div>
                     <div className="pl-10 space-y-2">
                       <p>Classe</p>
-                      {/* <input
-                        className="h-10 w-96 border rounded-lg bg-stone-100"
-                        type="text"
-                        name="classeprovenance"
-                        value={classeprovenance}
-                        onChange={(e) => setClasseprovenance(e.target.value)}
-                        id="ecolepro"
-                      /> */}
                       <select
                 className=" w-[380px] rounded-lg h-10"
                 value={classeprovenance}
@@ -260,7 +216,6 @@ export default function Inscription() {
                 <option value="4 iéme">4 iéme</option>
                 <option value="5 iéme">5 iéme</option>
                 <option value="6 iéme">6 iéme</option>
-                {/* <p>Option sélectionnée : {genre}</p> */}
               </select>
                     </div>
                     <div className="pl-10 space-y-2">
@@ -287,7 +242,6 @@ export default function Inscription() {
               Suivant
             </button>
           </div>
-          <PersIns />
         </div>
       </form>
     </div>

@@ -10,7 +10,7 @@ import Login from './Login'
 import Inscription from './Inscription'
 import Section from './Section'
 import Signup  from './Signup'
-
+import PersIns  from './PersIns'
 
 
 
@@ -28,14 +28,10 @@ function App() {
           <Route path='/Inscription' element={<Inscription />} />
           <Route path='/Section' element={<Section />} />
           <Route path='/Signup' element={<Signup />} />
-
-
+          <Route path='/PersIns' element={<PersIns />} />
         </Routes>
         <Footer />
       </BrowserRouter>
-
-
-
     </>
   )
 }

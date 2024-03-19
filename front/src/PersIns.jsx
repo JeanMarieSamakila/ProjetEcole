@@ -9,7 +9,7 @@ const PersIns = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3010/inscrits');
+        const response = await axios.get('http://localhost:3000/inscrits');
         setInscrits(response.data);
       } catch (error) {
         console.error('Erreur lors de la récupération des personnes inscrites :', error);

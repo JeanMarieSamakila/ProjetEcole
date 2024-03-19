@@ -43,17 +43,17 @@ export default function Contact() {
         <div className="">
           <HeaderContact />
         </div>
-        <div className="flex  items-center justify-center font-bold bg-slate-300">
-          <form className=" items-center justify-center border-2xl  w-1/2 pt-2 ml-64 mb-80 mt-20">
-            <div className="flex pl-5 gap-16">
+        <div className=" flex  items-center justify-center font-bold bg-slate-300">
+          <form className=" items-center justify-center  border-2xl  w-1/2 pt-2 ml-40 bg-slate-400  mb-80 mt-20">
+            <div className="flex pl-52 gap-16 mt-10">
               <p for="name"> Nom :</p>
               <input
-                className="h-14  border rounded-lg w-[51%]  bg-gray-100 "
+                className="h-14  border rounded-lg w-[51%]  bg-transparent "
                 type="text"
                 id="nom"
               />
             </div>
-            <div className="flex pt-9 pl-4 gap-6 ">
+            <div className="flex pt-9 pl-52 gap-6 ">
               <p for="tel">Telephone :</p>
               <input
                 className="h-14 border rounded-lg w-[51%]  bg-gray-100  "
@@ -61,7 +61,7 @@ export default function Contact() {
                 id="tel"
               />
             </div>
-            <div className="flex pt-9  pl-6 gap-16 ">
+            <div className="flex pt-9  pl-52 gap-16 ">
               <p for="email">Mail :</p>
               <input
                 className="h-14 border rounded-lg w-[51%] ml-1  bg-gray-100 "
@@ -70,7 +70,7 @@ export default function Contact() {
               />
             </div>
 
-            <div className="flex pt-9  pl-4 gap-10">
+            <div className="flex pt-9  pl-52 gap-10">
               <p for="message">Message :</p>
               <textarea
                 name="message"
@@ -82,7 +82,7 @@ export default function Contact() {
               <button
                 onClick={handleClick}
                 type="submit"
-                className=" bg-blue-950 font-bold text-white border rounded-full w-32 h-14"
+                className=" bg-blue-950 font-bold text-white border rounded-full ml-44 w-32 h-14 mb-10"
               >
                 Envoyer
               </button>

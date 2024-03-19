@@ -40,6 +40,15 @@
   background-image: url('src/image/background.jpg');
 
 }
+.image-contact{
+  background-image: url('src/image/livre.jpg');
+  background-repeat: no-repeat;
+  width: 100%;
+height: 100vh;  
+background-size: cover;
+
+
+}
 
 /* .div-image {
   width: 100vw;
