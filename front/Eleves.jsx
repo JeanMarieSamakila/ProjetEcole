@@ -21,7 +21,7 @@ import { Doughnut } from 'react-chartjs-2';
 
 import HeaderDash from "./headermenu/HeaderContact";
 import './App.css'
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Legend,  } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Legend, } from 'recharts';
 // import { PieChart, Pie, Sector, ResponsiveContainer } from 'recharts';
 import { BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill }
   from 'react-icons/bs'
@@ -34,7 +34,7 @@ export default function Dash() {
     datasets: [
       {
         label: 'Pourcentages',
-        data: [459 , 670],
+        data: [459, 670],
         backgroundColor: [
           'rgba(250, 100, 132, 0.5)',
           'rgba(54, 162, 235, 0.5)',
@@ -134,7 +134,7 @@ export default function Dash() {
               <Doughnut
                 data={data_graphe}
                 options={options}
-               
+
               />
             </div>
 
@@ -144,8 +144,8 @@ export default function Dash() {
 
       </div>
 
-     <div>
-       <LineChart
+      <div>
+        <LineChart
           width={500}
           height={300}
           data={data}
@@ -162,8 +162,8 @@ export default function Dash() {
           <Legend />
           <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
           <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-        </LineChart> 
-    </div>
+        </LineChart>
+      </div>
 
     </div >
 
