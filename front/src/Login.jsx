@@ -87,6 +87,47 @@ export default function Contact() {
           </form>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+      <div className="flex gap-64  pl-44">
+        <div>
+          <p className=" text-blue-300 font-bold">Sign In</p>
+        </div>
+        <div>
+          <Link to="/Signup"><p className=" text-sky-300 font-bold">Sign Up</p></Link>
+        </div>
+      </div>
+      <form onSubmit={handleSubmit} className="flex-col pt-20 pl-44">
+        <div className="pb-10 ">
+          <input
+            className="border rounded-full h-14 w-1/4  bg-gray-100 pl-5 "
+            type="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+          />
+        </div>
+        <div className="pb-10 ">
+          <input
+            className="border rounded-full h-14 w-1/4  bg-gray-100 pl-5 "
+            type="password"
+            name="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Mot de Passe"
+          />
+        </div>
+        <div className="pt-10 pb-10">
+          <button
+            type="submit"
+            className="font-bold text-white border rounded-full h-14 w-44 bg-blue-950 "
+          >
+            Se connecté
+          </button>
+        </div>
+      </form>
+>>>>>>> a3cb3feedb5eeddb8c0b3fb634323299c406a731
     </div>
   );
 }
