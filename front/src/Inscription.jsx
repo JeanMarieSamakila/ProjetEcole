@@ -13,29 +13,28 @@ export default function Inscription() {
   const [classeprovenance, setClasseprovenance] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  // Fonction appelée lorsqu'une option est sélectionnée
+  
   const handleSelectChange = (event) => {
-    setGenre(event.target.value); // Mise à jour de la valeur sélectionnée dans l'état local
+    setGenre(event.target.value); 
   };
   const handleSectionSelectChange = (event) => {
-    setSection(event.target.value); // Mise à jour de la valeur sélectionnée dans l'état local
+    setSection(event.target.value); 
   };
   const handleOptionSelectChange = (event) => {
-    setOption(event.target.value); // Mise à jour de la valeur sélectionnée dans l'état local
+    setOption(event.target.value); 
   };
 
   const handleClassesollicitelectChange = (event) => {
-    setClassesollicite(event.target.value); // Mise à jour de la valeur sélectionnée dans l'état local
+    setClassesollicite(event.target.value); 
   };
   const handleClasseprovenanceSelectChange = (event) => {
-    setClasseprovenance(event.target.value); // Mise à jour de la valeur sélectionnée dans l'état local
+    setClasseprovenance(event.target.value); 
   };
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Vérification des champs obligatoires
     if (
       !name ||
       !phone ||
@@ -52,7 +51,7 @@ export default function Inscription() {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/inscription", {
+      const response = await fetch("http://localhost:3010/inscription", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -72,7 +71,7 @@ export default function Inscription() {
 
       if (response.ok) {
         const data = await response.json();
-        alert(data.message); // Afficher un message d'inscription réussie
+        alert(data.message); 
       } else {
         alert("Une erreur s'est produite lors de l'inscription");
       }
