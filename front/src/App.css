@@ -48,6 +48,19 @@
 
 
 }
+<<<<<<< HEAD
+=======
+.image-contact{
+  background-image: url('src/image/livre.jpg');
+  background-repeat: no-repeat;
+  width: 100%;
+height: 100vh;  
+background-size: cover;
+
+
+}
+
+>>>>>>> b8680a45c30659a4768c22925413a9227d967d91
 /* .div-image {
   width: 100vw;
   height: 100vh;

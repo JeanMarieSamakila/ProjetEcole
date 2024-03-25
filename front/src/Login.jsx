@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import HeaderContact from "./headermenu/HeaderContact";
 
 
@@ -18,6 +19,36 @@ export default function Contact() {
       email === email.value;
       message === message.value;
       alert('Votre message a bien été envoyé!');
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+export default function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('http://localhost:3010/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        alert(data.message);
+      } else {
+        alert("Une erreur s'est produite lors de la connexion");
+      }
+    }  catch (error) {
+      console.error("Erreur lors de la connexion :", error);
+      alert("Une erreur s'est produite lors de la connexion");
+>>>>>>> b8680a45c30659a4768c22925413a9227d967d91
     }
   };
 
@@ -33,6 +64,7 @@ export default function Contact() {
       <div className='pb-32'>
         <HeaderContact />
       </div>
+<<<<<<< HEAD
       <div className="image-contact">
         <div className="flex  items-center justify-center font-bold">
           {/* <div className="">
@@ -86,6 +118,49 @@ export default function Contact() {
 
           </form>
         </div>
+=======
+      <div className="images-arriere justify-center items-center text-center">
+        <div className="flex gap-64 justify-center text-center pl-44 mt-40 text-2xl">
+          <div>
+            <p className=" text-blue-300 font-bold">Sign In</p>
+          </div>
+          <div>
+            <Link to="/Signup">
+              <p className=" text-sky-300 font-bold">Sign Up</p>
+            </Link>
+          </div>
+        </div>
+        <form onSubmit={handleSubmit} className="flex-col pt-20 pl-44">
+          <div className="pb-10 ">
+            <input
+              className="border rounded-full h-14 w-1/4  bg-transparent pl-5 "
+              type="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+            />
+          </div>
+          <div className="pb-10 ">
+            <input
+              className="border rounded-full h-14 w-1/4 bg-transparent pl-5 "
+              type="password"
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Mot de Passe"
+            />
+          </div>
+          <div className="pt-10 pb-20 ">
+            <button
+              type="submit"
+              className="font-bold text-blue-950 border rounded-full h-14 w-44 bg-white "
+            >
+              Se connecter
+            </button>
+          </div>
+        </form>
+>>>>>>> b8680a45c30659a4768c22925413a9227d967d91
       </div>
     </div>
   );
