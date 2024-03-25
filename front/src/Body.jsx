@@ -30,14 +30,8 @@ export default function Body() {
                         <div>
                             <img className='w-12 sm:w-20 ml-5 sm:ml-8' src="src/image/material-symbols-light--assignment-ind-outline-sharp.svg" alt="" />
                         </div>
-<<<<<<< HEAD
                         <div>
                             <Link to="/Dash"><h1 className="text-sm sm:text-base md:text-lg lg:text-xl">Dash-bord</h1></Link>
-=======
-                        <div >
-                            <Link to='/PersIns'>
-                            <h1 className=' w-36'>Eleves Ins</h1></Link>
->>>>>>> b8680a45c30659a4768c22925413a9227d967d91
                         </div>
                     </div>
 
