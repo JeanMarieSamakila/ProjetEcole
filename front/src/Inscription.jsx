@@ -34,21 +34,15 @@ export default function Inscription() {
     return (
 
         <div>
-            <div className="pb-32">
+            <div>
             <HeaderInscription />
 
             </div>
-           
-            {/* <div>
-                <h1 className=" items-center pt-5 bg-blue-950 text-xl font-bold text-white w-74 h-20 mb-20  pl-20">Formulaire de demande d’inscription</h1>
-            </div> */}
-
-
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center bg-slate-400">
                 <div>
                     <img src="src/image/istockphoto-1.jpg" alt="" />
                 </div>
-                <div className=" ml-7 ">
+                <div className="  ml-7 mt-10 ">
                     <h1 className="font-bold text-sky-950 pl-10 pb-5 ">1. IDENTITE DE L’ELEVE</h1>
                     <div className=" space-y-7 ">
                         <div className="pl-10 space-y-2">

@@ -44,7 +44,10 @@
   height: 100vh;
   backdrop-filter: blur(100px);
 }
+@media screen and (max-width: 480px){
 
+
+}
 /* .div-image {
   width: 100vw;
   height: 100vh;

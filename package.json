@@ -13,5 +13,10 @@
   ],
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "repository": "https://github.com/JeanMarieSamakila/ProjetEcole.git",
+  "author": "keren <kerenhappuc4@gmail.com>",
+  "dependencies": {
+    "recharts": "^2.12.3"
   }
 }

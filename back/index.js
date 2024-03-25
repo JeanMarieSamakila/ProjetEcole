@@ -72,6 +72,6 @@ app.post('/inscription', async (req, res) => {
   });
   
 
-app.listen(3000, () => {
-  console.log('Serveur Express en cours d\'exécution sur le port 3000');
+app.listen(5000, () => {
+  console.log('Serveur Express en cours d\'exécution sur le port 5000');
 });

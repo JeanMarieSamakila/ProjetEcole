@@ -1,8 +1,5 @@
-
 import { Link } from 'react-router-dom'
-
 import { BarChart, Bar, Rectangle, Tooltip, XAxis, YAxis, CartesianGrid, Legend, LineChart, Line } from 'recharts';
-// import HeaderBarchart from "./headermenu/HeaderContact";
 export default function Barchart() {
     const salesData =
         [
@@ -74,20 +71,13 @@ export default function Barchart() {
     };
 
     return (
-
-        <div>
-            <div className="pb-32">
-                <HeaderBarchart />
-            </div>
+        <div>       
             <div className='flex justify-center items-center text-center gap-20 font-bold bg-slate-00  mb-10 border-1xl rounded- ml-10 mr-10'>
-
                 <div className='bg-gray-200 w-44 h-24 justify-center items-center text-center rounded-xl '>
-
                     <div className='flex  justify-center mt-5 gap-20'>
                         <Link to="/Dash"><button>Doughnut</button></Link>
                     </div>
                 </div>
-
                 <div className='bg-gray-200 w-44 h-24 justify-center items-center text-center rounded-xl '>
 
                     <div className='flex  justify-center mt-5 gap-20'>
